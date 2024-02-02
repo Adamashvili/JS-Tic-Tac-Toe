@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard {
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0px 20px 4px white;
+    position: relative;
+    border-radius: 8px;
+    background-color: white;
+
+
+}
+
+.gameArena {
+
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 25px 3px rgb(82, 147, 204);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    background-color: white;
+
+}
+
+.squares {
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(135, 184, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.squares:hover {
+    background-color: rgb(141, 203, 212);
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0px solid blueviolet;
+    box-shadow: inset 0px 0px 10px 4px blueviolet, 0px 0px 10px 6px blueviolet;
+
+
+}
+
+.cross {
+    width: 15px;
+    height: 80px;
+    position: relative;
+    background: darkred;
+    transform: rotate(45deg);
+    box-shadow: inset 0px 0px 15px 6px darkred, 0px 0px 10px 3px darkred;
+}
+
+.cross:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    background: darkred;
+    left: -33px;
+    top: 32px;
+    box-shadow: inset 0px 0px 15px 6px darkred, 0px 0px 10px 3px darkred;
+}
+
+.status {
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.restart {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: white;
+    font-family: cursive;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 4px darkblue;
+    transition: 0.3s all ease;
+
+}
+
+.restart:hover {
+    box-shadow: 0px 0px 10px 6px blue;
+    background: blue;
+}
